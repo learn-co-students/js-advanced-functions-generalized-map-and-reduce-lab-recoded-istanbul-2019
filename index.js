@@ -20,12 +20,12 @@ function reduce(arr, callback, start = 0) {
     // }
     // return arr.reduce(callback, start)
 
-    let accumulator = start ? start : arr[0];
+    let total = start ? start : arr[0];
     let i = start ? 0 : 1;
 
     for (; i < arr.length; i++) {
-        accumulator = callback(arr[i], accumulator);
+        total = callback(arr[i], total);
     }
 
-    return accumulator;
+    return total;
 }
