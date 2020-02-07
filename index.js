@@ -19,10 +19,10 @@ function map(sourceArray,fn){
 // return sourceArray.map(fn);
 }
 
-function reduce(sourceArray,fn,startingPoint=0){
+function reduce(sourceArray,fn,startingPoint=undefined){
   let valueReturn;
   let x;
-  if(startingPoint==0)
+  if(startingPoint==undefined)
    { 
      valueReturn=sourceArray[0];
     x=1;
