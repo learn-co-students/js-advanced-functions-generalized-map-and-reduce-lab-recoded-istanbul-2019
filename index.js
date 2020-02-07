@@ -23,10 +23,16 @@ function reduce(sourceArray,fn,startingPoint=0){
   let valueReturn;
   let x;
   if(startingPoint==0)
-   { valueReturn=sourceArray[0];
-    x=1;}
+   { 
+     valueReturn=sourceArray[0];
+    x=1;
+   }
   else
- {  valueReturn=startingPoint; x=0}
+ { 
+   valueReturn=startingPoint;
+   x=0;
+   
+ }
   for(let i=x;i<sourceArray.length;i++)
   {
     valueReturn=fn(sourceArray[i],valueReturn);
