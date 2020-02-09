@@ -32,6 +32,7 @@ describe('my own reduce-like methods', function() {
       expect(reduce(sourceArray, function(e, memo){return e + memo})).to.equal(6)
     })
   })
+  
 
   describe("reduce returns a running total when given a starting point", function() {
     it("reduces correctly", function(){
