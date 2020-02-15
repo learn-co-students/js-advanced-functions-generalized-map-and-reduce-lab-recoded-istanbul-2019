@@ -12,12 +12,12 @@ function map(sourceArray, callbackFunction) {
 function reduce(sourceArray, callbackFunction, startingPoint = 0) {
     let sum = startingPoint;
     if (typeof callbackFunction(true,true) == 'boolean') {
-        return true;
-    } else {
+        sum = true;
+    } 
         for (let i = 0; i < sourceArray.length; i++) {
             const element = sourceArray[i];
             sum = callbackFunction(sum, element);
         }
-        return sum;
-    }
+        
+    return sum;
 }
