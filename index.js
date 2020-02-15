@@ -9,19 +9,11 @@ function map(sourceArray, callbackFunction) {
     return outcomeArray;
 }
 
-function reduce(sourceArray, callbackFunction, startingPoint = undefined) {
+function reduce(sourceArray, callbackFunction, startingPoint = 0) {
     let sum = startingPoint;
     if (typeof callbackFunction(true,true) == 'boolean') {
         return true;
-    }
-    if (startingPoint !== undefined) {
-        for (let i = 0; i < sourceArray.length; i++) {
-            const element = sourceArray[i];
-            sum = callbackFunction(sum, element);
-        }
-        return sum;
     } else {
-        sum = 0;
         for (let i = 0; i < sourceArray.length; i++) {
             const element = sourceArray[i];
             sum = callbackFunction(sum, element);
