@@ -25,3 +25,4 @@ const init = 100
 reduce(sourceArray, function(e, memo){return e + memo});
 
 console.log(reduce(sourceArray, function(e, memo){return e + memo}, init))
+console.log('baba')
